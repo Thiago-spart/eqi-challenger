@@ -9,7 +9,7 @@ const HomePage: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>{`Calculadora de investimentos | ${SITE.name}`}</title>
+				<title>{SITE.name}</title>
 			</Head>
 			<Page />
 		</>
