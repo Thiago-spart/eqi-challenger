@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
 		-webkit-font-smoothing: antialiased;
-		background: linear-gradient(var(--background-top-color), var(--background-bottom-color));
+		background: var(--background-color);
     color: var(--text-color);
     ${fontFamily}
 		${fonts.text4}
@@ -52,12 +52,12 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	::-webkit-scrollbar-thumb {
-		/* background: var(--scrollbar); */
+		background: var(--dark);
 		border-radius: 5px;
 	}
 
 	::-webkit-scrollbar-track {
-		/* background: var(--scrosllbar-background); */
+		background: var(--background-color);
 		border-radius: 5px;
 	}
 

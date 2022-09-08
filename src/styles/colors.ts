@@ -1,7 +1,12 @@
 import { css } from "styled-components";
 
 export const colors = css`
-	--background-top-color: rgba(215, 215, 215, 1);
-	--background-bottom-color: rgba(107, 107, 107, 1);
-	--text-color: #050412;
+	--background-color: hsl(0deg 0% 100%);
+	--dashboard-background-color: hsl(0deg 0% 94%);
+	--text-color: hsl(0deg 0% 4%);
+	--primary: hsl(23deg 81% 63%);
+	--success: hsl(112deg 42% 47%);
+	--danger: hsl(0deg 79% 70%);
+	--soft-danger: hsl(0deg 59% 85%);
+	--dark: hsl(0deg 0% 0%);
 `;
