@@ -4,20 +4,21 @@ export const Container = styled.main`
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	padding: 2rem;
-	gap: 1rem;
+	width: 100%;
+	padding: 2.5rem 3rem;
+`;
 
-	h1 {
-		font-size: 4.2rem;
-		line-height: 5.2rem;
-		letter-spacing: 0.25rem;
-		font-weight: 300;
-	}
+export const DashBoardContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+	width: 100%;
+	background-color: var(--dashboard-background-color);
+	padding: 3rem;
+`;
 
-	p {
-		font-weight: 300;
-		font-size: 1.6rem;
-		line-height: 2rem;
-		letter-spacing: 0.15rem;
-	}
+export const SimulateContent = styled.div`
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
 `;
