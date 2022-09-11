@@ -21,4 +21,5 @@ export const SimulateContent = styled.div`
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
+	width: 100%;
 `;

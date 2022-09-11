@@ -30,7 +30,8 @@
 		"jest.config.js",
 		"next-i18next.config.js",
 		"sitemap-generator.js",
-		"next.config.js"
+		"next.config.js",
+		"src/web/components/Coiso/index.js"
 	],
 	"files": ["src/types/react.d.ts"]
 }
