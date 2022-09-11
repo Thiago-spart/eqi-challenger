@@ -24,11 +24,13 @@
 		"next": "12.2.5",
 		"react": "18.0.0",
 		"react-dom": "18.0.0",
+		"react-hook-form": "^7.34.2",
 		"react-icons": "^4.4.0",
 		"react-is": "^18.0.0",
 		"require-from-string": "^2.0.2",
 		"styled-components": "^5.3.5",
-		"webpack": "^5.74.0"
+		"webpack": "^5.74.0",
+		"yup": "^0.32.11"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.19.0",

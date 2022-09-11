@@ -1,5 +1,7 @@
 import { Header } from "web/components/Header/Header.index";
 
+import { SimulateForm } from "./components/SimulateForm/SimulateForm.index";
+
 import * as S from "./HomePage.styled";
 
 export const HomePage: React.FC = () => {
@@ -9,7 +11,7 @@ export const HomePage: React.FC = () => {
 				<Header />
 
 				<S.SimulateContent>
-					<h1>Form</h1>
+					<SimulateForm />
 					<h1>Conteúdo</h1>
 				</S.SimulateContent>
 			</S.DashBoardContainer>
