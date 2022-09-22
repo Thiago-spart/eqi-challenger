@@ -17,12 +17,14 @@
 		"format": "eslint -fix --ext js,ts,jsx,tsx src"
 	},
 	"dependencies": {
+		"apexcharts": "^3.35.5",
 		"axios": "^0.27.2",
 		"eslint-plugin-n": "^15.2.5",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-promise": "^6.0.1",
 		"next": "12.2.5",
 		"react": "18.0.0",
+		"react-apexcharts": "^1.4.0",
 		"react-dom": "18.0.0",
 		"react-hook-form": "^7.34.2",
 		"react-icons": "^4.4.0",
