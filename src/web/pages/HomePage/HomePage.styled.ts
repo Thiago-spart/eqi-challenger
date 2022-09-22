@@ -22,4 +22,5 @@ export const SimulateContent = styled.div`
 	align-items: baseline;
 	justify-content: space-between;
 	width: 100%;
+	gap: 2rem;
 `;

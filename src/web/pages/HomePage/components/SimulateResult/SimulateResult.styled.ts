@@ -8,3 +8,10 @@ export const Container = styled.section`
 	width: 50%;
 	gap: 2rem;
 `;
+
+export const CardContainer = styled.div`
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem 4rem;
+`;
