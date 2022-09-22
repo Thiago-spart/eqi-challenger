@@ -7,7 +7,7 @@ import { Tooltip } from "web/components/Tooltip/Tooltip.index";
 
 import * as S from "./SimulateForm.styled";
 
-const labelRatios = [
+const finalCurrencyType = [
 	{
 		isActive: false,
 		label: "Bruto",
@@ -17,6 +17,24 @@ const labelRatios = [
 		isActive: true,
 		label: "Liquido",
 		value: "liquido",
+	},
+];
+
+const indexType = [
+	{
+		isActive: false,
+		label: "PRÉ",
+		value: "pre",
+	},
+	{
+		isActive: true,
+		label: "POS",
+		value: "pos",
+	},
+	{
+		isActive: false,
+		label: "FIXADO",
+		value: "fixado",
 	},
 ];
 
@@ -35,7 +53,7 @@ export const SimulateForm: React.FC = () => {
 						</Tooltip>
 					</S.TitleContainer>
 
-					<RadioInput name="final-amount" ratios={labelRatios} />
+					<RadioInput name="final-amount" ratios={finalCurrencyType} />
 
 					<Input
 						type="text"
@@ -56,7 +74,7 @@ export const SimulateForm: React.FC = () => {
 					<Input
 						type="number"
 						label="IPCA (ao ano)"
-						name="initial_contribution"
+						name="ipca"
 						placeholder="5.34%"
 					/>
 
@@ -64,7 +82,42 @@ export const SimulateForm: React.FC = () => {
 						Limpar campos
 					</Button>
 				</S.FormGroup>
-				<S.FormGroup>grupo 2</S.FormGroup>
+				<S.FormGroup>
+					<S.TitleContainer>
+						<h5>Tipos de indexação</h5>
+
+						<Tooltip message="aviso">
+							<BsExclamationCircle />
+						</Tooltip>
+					</S.TitleContainer>
+
+					<RadioInput name="final-amount" ratios={indexType} />
+
+					<Input
+						type="text"
+						label="Aporte Mensal"
+						name="month_contribution"
+						placeholder="R$ 100,00"
+					/>
+
+					<Input
+						type="number"
+						label="Rentabilidade"
+						name="profitability"
+						placeholder="5"
+					/>
+
+					<Input
+						type="number"
+						label="CDI (ao ano)"
+						name="cdi"
+						placeholder="9,18%"
+					/>
+
+					<Button schema="primary" isFullWidth>
+						Simular
+					</Button>
+				</S.FormGroup>
 			</S.FormContainer>
 		</S.Container>
 	);
