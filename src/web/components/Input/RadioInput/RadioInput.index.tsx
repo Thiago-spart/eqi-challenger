@@ -18,7 +18,7 @@ export const RadioInput: React.FC<RadioInputProp> = ({ name, ratios }) => {
 						id={ratio.value}
 						name={name}
 						value={ratio.value}
-						checked={ratio.isActive}
+						defaultChecked={ratio.isActive}
 					/>
 				</S.StyleRatio>
 			))}

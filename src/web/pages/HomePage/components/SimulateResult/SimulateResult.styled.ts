@@ -15,3 +15,11 @@ export const CardContainer = styled.div`
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem 4rem;
 `;
+
+export const ChartContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+`;
