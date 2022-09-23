@@ -17,6 +17,7 @@
 		"format": "eslint -fix --ext js,ts,jsx,tsx src"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^2.9.8",
 		"apexcharts": "^3.35.5",
 		"axios": "^0.27.2",
 		"eslint-plugin-n": "^15.2.5",
