@@ -1,9 +1,15 @@
+import { useForm } from "react-hook-form";
 import { BsExclamationCircle } from "react-icons/bs";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import { Button } from "web/components/Button/Button.index";
 import Input from "web/components/Input/Input.index";
 import { RadioInput } from "web/components/Input/RadioInput/RadioInput.index";
 import { Tooltip } from "web/components/Tooltip/Tooltip.index";
+
+import type { FormDataProps } from "./SimulateForm.types";
 
 import * as S from "./SimulateForm.styled";
 
@@ -38,7 +44,27 @@ const indexType = [
 	},
 ];
 
+const schema = yup
+	.object({
+		initialContribution: yup.string().required(),
+		termsInMonths: yup.string().required(),
+		ipca: yup.string().required(),
+		monthContribution: yup.string().required(),
+		profitability: yup.string().required(),
+		cdi: yup.string().required(),
+	})
+	.required();
+
 export const SimulateForm: React.FC = () => {
+	const {
+		register,
+		formState: { errors },
+	} = useForm({
+		resolver: yupResolver(schema),
+	});
+
+	const onSubmit = (data: FormDataProps) => console.log(data);
+
 	return (
 		<S.Container>
 			<h3>Simulador</h3>
@@ -56,25 +82,20 @@ export const SimulateForm: React.FC = () => {
 					<RadioInput name="final-amount" ratios={finalCurrencyType} />
 
 					<Input
-						type="text"
 						label="Aporte Inicial"
-						name="initial_contribution"
+						{...register("initialContribution")}
 						placeholder="R$ 100,00"
 					/>
 
 					<Input
-						type="number"
 						label="Prazo (em meses)"
-						name="terms_in_months"
-						min="1"
-						max="12"
+						{...register("termsInMonths")}
 						placeholder="5%"
 					/>
 
 					<Input
-						type="number"
 						label="IPCA (ao ano)"
-						name="ipca"
+						{...register("ipca")}
 						placeholder="5.34%"
 					/>
 
@@ -94,27 +115,24 @@ export const SimulateForm: React.FC = () => {
 					<RadioInput name="final-amount" ratios={indexType} />
 
 					<Input
-						type="text"
 						label="Aporte Mensal"
-						name="month_contribution"
+						{...register("monthContribution")}
 						placeholder="R$ 100,00"
 					/>
 
 					<Input
-						type="number"
 						label="Rentabilidade"
-						name="profitability"
+						{...register("profitability")}
 						placeholder="5"
 					/>
 
 					<Input
-						type="number"
 						label="CDI (ao ano)"
-						name="cdi"
+						{...register("cdi")}
 						placeholder="9,18%"
 					/>
 
-					<Button schema="primary" isFullWidth>
+					<Button schema="primary" isFullWidth onSubmit={() => onSubmit}>
 						Simular
 					</Button>
 				</S.FormGroup>
